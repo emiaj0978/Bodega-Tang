@@ -19,7 +19,7 @@
 }
 
 body {
-    background: url("../imagen/image.png") no-repeat center center;
+    background: url("../imagen/image1.png") no-repeat center center;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
