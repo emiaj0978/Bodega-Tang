@@ -101,6 +101,12 @@ El sistema cuenta con 4 tablas principales:
 | CLIENTE | Personas que compran |
 | VENTA | Registro de ventas |
 
+### Diagrama Entidad-Relacion (DER)
+![Diagrama Entidad Relacion](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Diagrama_Entidad_Relacion.png)
+ 
+### Modelo Relacional (MR)
+![Modelo Relacional](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Modelo_Relacional.png)
+
 ---
 
 ## Cardinalidades
