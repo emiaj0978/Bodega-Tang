@@ -26,6 +26,12 @@ public class VentaController {
     @GetMapping
     public List<Venta> listar() {return ventaService.listarTodos();}
 
+    //POST /api/clientes -> para guardar un cliente
+    @PostMapping
+    public ResponseEntity<Venta> crear(@RequestBody Venta venta){
+        return ResponseEntity.ok(ventaService.crearVenta(venta));
+    }
+
     //delete/api/clientes/{id} -> elimina un cliente por su id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable long id){

@@ -20,6 +20,11 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
+    // Crear un cliente        //nombre de la clase
+    public Cliente crearCliente(Cliente cliente){
+        return clienteRepository.save(cliente);
+    }
+
     //Eliminar el cliente por el id
     public void eliminarCliente(long id){
         clienteRepository.deleteById(id);

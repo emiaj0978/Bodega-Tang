@@ -20,6 +20,11 @@ public class ProveedorService {
         return proveedorRepository.findAll();
     }
 
+    // Crear un cliente        //nombre de la clase
+    public Proveedor crearProveedor(Proveedor proveedor){
+        return proveedorRepository.save(proveedor);
+    }
+
     //Eliminar el cliente por el id
     public void eliminarProveedor(long id){
         proveedorRepository.deleteById(id);

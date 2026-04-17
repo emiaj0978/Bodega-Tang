@@ -26,6 +26,12 @@ public class ProveedorController {
     @GetMapping
     public List<Proveedor> listar() {return proveedorService.listarTodos();}
 
+    //POST /api/clientes -> para guardar un cliente
+    @PostMapping
+    public ResponseEntity<Proveedor> crear(@RequestBody Proveedor proveedor){
+        return ResponseEntity.ok(proveedorService.crearProveedor(proveedor));
+    }
+
     //delete/api/clientes/{id} -> elimina un cliente por su id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable long id){

@@ -20,6 +20,11 @@ public class VentaService {
         return ventaRepository.findAll();
     }
 
+    // Crear un cliente        //nombre de la clase
+    public Venta crearVenta(Venta venta){
+        return ventaRepository.save(venta);
+    }
+
     //Eliminar el cliente por el id
     public void eliminarVenta(long id){
         ventaRepository.deleteById(id);
