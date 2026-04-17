@@ -105,6 +105,11 @@ El sistema cuenta con 4 tablas principales:
 
 ## Cardinalidades
 
+| Entidad A | Relación | Entidad B | Cardinalidad |
+|---|---|---|---|
+| PROVEEDOR | suministra | PRODUCTO | 1:N |
+| CLIENTE | realiza | VENTA | 1:N |
+
 PROVEEDOR — PRODUCTO (1:N)  
 Un proveedor puede tener muchos productos, pero un producto pertenece a un solo proveedor.
 
