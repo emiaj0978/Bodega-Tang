@@ -10,8 +10,8 @@
     --bg: #f5f5f5;
     --text: #1a1a1a;
     --sidebar-w: 220px;
-    --sidebar-bg: #9dc1e4;
-    --sidebar-line: rgba(0, 0, 0, 0.1);
+    --sidebar-bg: rgba(255,193, 81, 0.89);
+    --sidebar-line: rgba(0, 0, 0, 0.42);
     --muted: #404040;
     --accent: #4f46e5;
     --topbar-h: 56px;
@@ -19,7 +19,7 @@
 }
 
 body {
-    background: url("../image.png") no-repeat center center;
+    background: url("../imagen/image.png") no-repeat center center;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
@@ -102,7 +102,7 @@ body {
     font-weight: 500;
     border-bottom: 1px solid var(--sidebar-line);
     margin-bottom: 12px;
-    color: #bd8c2a;
+    color: #ce4747;
     letter-spacing: 0.5px;
         text-align: center;
 }
@@ -182,7 +182,7 @@ main {
 }
 
 .main-content {
-    background: #9dc1e4;
+    background: rgba(251,184, 108, 0.92);
     border-radius: 12px;
     padding: 24px;
     border: 1px solid var(--sidebar-line);

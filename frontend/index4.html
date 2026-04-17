@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +16,7 @@
     <!-- TOPBAR (solo visible en móvil) -->
     <div class="topbar">
         <div class="title-business">
-            <span>LBNETWORK</span>
+            <span>Bodega Tang</span>
         </div>
         <div class="btn-menu">
             <button class="hamburger" aria-label="Abrir menú">
@@ -31,36 +30,30 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-        <div class="sidebar-logo">LBNETWORK</div>
+        <div class="sidebar-logo">Bodega Tang</div>
         <ul>
             <li>
-                <a href="index.html" >
-                    <i class="fa-solid fa-user"></i>
+                <a href="index.html" data-page="home">
+                    <i class="fa-solid fa-users"></i>
                     <span>Clientes</span>
                 </a>
             </li>
             <li>
-                <a href="index2.html" >
-                    <i class="fa-solid fa-wifi"></i>
-                    <span>Servicios</span>
-                </a>
-            </li>
-             <li>
-                <a href="index3.html" >
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <span>Planes</span>
-                </a>
-            </li>
-             <li>
-                <a href="#" class="activo" data-page="home" >
-                    <i class="fa-solid fa-money-bill"></i>
-                    <span>Pagos</span>
+                <a href="index2.html"  data-page="reportes">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Producto</span>
                 </a>
             </li>
             <li>
-                <a href="index5.html" >
-                    <i class="fa-solid fa-user-gear"></i>
-                    <span>Soporte Tecnico</span>
+                <a href="index3.html" data-page="home">
+                    <i class="fa-solid fa-people-carry-box"></i>
+                    <span>Proveedor</span>
+                </a>
+            </li>
+            <li>
+                <a href="index4.html" class="activo" data-page="reportes">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <span>Ventas</span>
                 </a>
             </li>
             <li class="nav-logout">
@@ -77,26 +70,27 @@
         <nav class="breadcrumb">
             <span>Inicio</span>
             <i class="fa-solid fa-chevron-right"></i>
-            <span id="breadcrumb-page">Pagos</span>
+            <span id="breadcrumb-page">Ventas</span>
         </nav>
         <div class="main-content">
-            <div class="mb-2 d-flex justify-content-between align-items-center border-bottom pb-3">
-                <h4 class="mb-0 fw-semibold"> Reporte de Pagos
-                </h4>
-                <button class="btn btn-primary"> Registrar
+            <div class="mb-2 d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">REPORTE DE VENTAS</h4>
+                <button 
+                        class="btn btn-primary"
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalRegistroCliente"
+                        >REGISTRAR
                 </button>
-
             </div>
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
                             <th>ID</th>
-                            <th>ID del Servicio</th>
-                            <th>Fecha de pago</th>
-                            <th>Monto</th>
-                            <th>Opsiones</th>
-                            
+                            <th>Fecha</th>
+                            <th>ID del cliente</th>
+                            <th>Total</th>
+                            <th>Opciones</th>
                         </tr>
                     </thead>
                     <tbody id="table-cliente">
@@ -105,17 +99,49 @@
                 </table>
             </div>
         </div>
-        
-
-
-        
     </main>
+
+<!-- Modal REGISTRO DE CLIENTE-->
+<div class="modal fade" id="modalRegistroCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">fecha</label>
+                    <input type="text" class="form-control" id="c_fecha" name="fecha" required>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">id del cliente</label>
+                    <input type="text" class="form-control" id="c_id_cliente" name="id_cliente" required>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">total</label>
+                    <input type="text" class="form-control" id="c_total" name="total" required>
+                </div>
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btn-crearcliente">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     
+
+
+
+
 
     <script src="js/main4.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
