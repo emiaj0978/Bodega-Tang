@@ -16,9 +16,6 @@ public class Cliente {
     // nullable=false significa que este campo no puede estar vacio en la BD
     @Column(nullable = false)
     private String nombre;
-    @Column(nullable = false)
-    private String apellido;
-    private String ruc;
     //Sin anotaciones ( @ ) extra: columna normal, puede ser nula
     private String telefono;
     private String direccion;
@@ -47,22 +44,6 @@ public class Cliente {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
-    }
-
-    public String getRuc() {
-        return ruc;
-    }
-
-    public void setRuc(String ruc) {
-        this.ruc = ruc;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public String getNombre() {

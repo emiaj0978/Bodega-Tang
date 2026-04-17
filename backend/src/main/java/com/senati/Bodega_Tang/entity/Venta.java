@@ -11,17 +11,17 @@ public class Venta {
     // @Column(name="cliente_id") indica el nombre exacto de la columna en mysql
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente")
+    @Column(name = "id_venta")
     private Long id;
     // nullable=false significa que este campo no puede estar vacio en la BD
     @Column(nullable = false)
-    private String nombre;
+    private String fecha;
     @Column(nullable = false)
-    private String apellido;
-    private String ruc;
-    //Sin anotaciones ( @ ) extra: columna normal, puede ser nula
-    private String telefono;
-    private String direccion;
+    private String total;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_cliente")  // Esto es la llave foránea
+    private Cliente cliente;
 
     //GETTER a SETTERS
 
@@ -33,43 +33,27 @@ public class Venta {
         this.id = id;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getTotal() {
+        return total;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setTotal(String total) {
+        this.total = total;
     }
 
-    public String getRuc() {
-        return ruc;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setRuc(String ruc) {
-        this.ruc = ruc;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 }

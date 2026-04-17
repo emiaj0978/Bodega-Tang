@@ -11,14 +11,11 @@ public class Proveedor {
     // @Column(name="cliente_id") indica el nombre exacto de la columna en mysql
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente")
+    @Column(name = "id_proveedor")
     private Long id;
     // nullable=false significa que este campo no puede estar vacio en la BD
     @Column(nullable = false)
     private String nombre;
-    @Column(nullable = false)
-    private String apellido;
-    private String ruc;
     //Sin anotaciones ( @ ) extra: columna normal, puede ser nula
     private String telefono;
     private String direccion;
@@ -47,22 +44,6 @@ public class Proveedor {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
-    }
-
-    public String getRuc() {
-        return ruc;
-    }
-
-    public void setRuc(String ruc) {
-        this.ruc = ruc;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public String getNombre() {

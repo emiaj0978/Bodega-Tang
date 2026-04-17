@@ -11,7 +11,7 @@ public class Producto {
     // @Column(name="cliente_id") indica el nombre exacto de la columna en mysql
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IDproducto")
+    @Column(name = "id_producto")
     private Long id;
     // nullable=false significa que este campo no puede estar vacio en la BD
     @Column(nullable = false)
@@ -21,42 +21,15 @@ public class Producto {
     //unique=true significa que no puede haber dos clientes con el mismo DNI
     //length=8 significa limita el campo a 8 caracteres
     @Column(nullable = false,unique = true,length = 8)
-    private String precio_compra;
+    private String precio;
     //Sin anotaciones ( @ ) extra: columna normal, puede ser nula
-    private String precio_venta;
-    private String stock_actual;
-    private String fecha_vencimiento;
+    private String stock;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "IDcategoria")  // Esto es la llave foránea
-    private Categoria categoria;
-
-    public String getFecha_vencimiento() {
-        return fecha_vencimiento;
-    }
-
-    public void setFecha_vencimiento(String fecha_vencimiento) {
-        this.fecha_vencimiento = fecha_vencimiento;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
+    @JoinColumn(name = "id_proveedor")  // Esto es la llave foránea
+    private Proveedor proveedor;
 
     //GETTER a SETTERS
-
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public Long getId() {
         return id;
@@ -64,6 +37,30 @@ public class Producto {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Proveedor getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
+
+    public String getStock() {
+        return stock;
+    }
+
+    public void setStock(String stock) {
+        this.stock = stock;
+    }
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
     }
 
     public String getDescripcion() {
@@ -74,27 +71,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public String getPrecio_compra() {
-        return precio_compra;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setPrecio_compra(String precio_compra) {
-        this.precio_compra = precio_compra;
-    }
-
-    public String getPrecio_venta() {
-        return precio_venta;
-    }
-
-    public void setPrecio_venta(String precio_venta) {
-        this.precio_venta = precio_venta;
-    }
-
-    public String getStock_actual() {
-        return stock_actual;
-    }
-
-    public void setStock_actual(String stock_actual) {
-        this.stock_actual = stock_actual;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
