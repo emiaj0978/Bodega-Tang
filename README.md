@@ -76,20 +76,20 @@ Desarrollar un sistema web usando Java Spring Boot y MySQL que permita registrar
 
 ## Estructura del proyecto
 
-
-TiendaTang/
-├── backend/ → Spring Boot
-│ ├── src/
-│ ├── pom.xml
-│ └── ...
-├── frontend/ → HTML, CSS, JS
-│ ├── css/
-│ ├── js/
-│ └── index.html
-
-
+```
+JavaWeb-GotaGota/
+├── backend/          → Spring Boot (Java)
+│   ├── src/
+│   ├── pom.xml
+│   └── ...
+├── frontend/         → HTML, CSS, JS
+│   ├── css/
+│   ├── js/
+│   └── index.html
+```
+ 
 ---
-
+ 
 ## Base de datos
 
 El sistema cuenta con 4 tablas principales:
@@ -199,21 +199,45 @@ INSERT INTO venta (fecha, id_cliente, total) VALUES
 
 ---
 
-## Cómo correr el proyecto
-🔧 Requisitos previos
-IntelliJ IDEA
-XAMPP
-MySQL Workbench
-JDK 17 o superior
-Backend
-Abrir backend/ en IntelliJ
-Configurar application.properties
-Iniciar MySQL en XAMPP
-Ejecutar el proyecto
+## Como correr el proyecto
+ 
+### Requisitos previos
+- Tener instalado IntelliJ IDEA
+- Tener instalado XAMPP (para MySQL)
+- Tener instalado MySQL Workbench
+- Tener instalado JDK 21 o superior
+ 
+### Backend
+1. Abrir la carpeta `backend/` en IntelliJ IDEA
+2. Configurar `application.properties` con los datos de MySQL
+3. Iniciar XAMPP y activar MySQL
+4. Ejecutar `GotagotaApplication.java`
+5. El backend corre en: `http://localhost:8080`
+ 
+### Frontend
+1. Abrir la carpeta `frontend/` en VsCode
+2. Abrir `index.html` con Live Server
+3. El frontend se comunica con el backend via fetch()
+ 
+> El frontend y el backend corren por separado.
+> El backend debe estar iniciado antes de abrir el frontend.
+ 
+### Configuracion de base de datos
+```
+spring.application.name=gotagota
+# CONEXION A MYSQL
+spring.datasource.url=jdbc:mysql://localhost:3306/bodega_tang
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-Servidor:
+#JPA / HIBERNATE
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
-http://localhost:8080
-Frontend
-Abrir frontend/ en VS Code
-Ejecutar con Live Server
+# Puerto del servidor
+server.port=8080
+
+```
+ 
