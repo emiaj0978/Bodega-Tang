@@ -1,216 +1,219 @@
 ## TRELLO
-Más info en [mi tablero de trello](https://trello.com/b/4lC3J8oT/java-proyecto-senati)
-![TRELLO](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Trello.png)
+Más info en [mi tablero de trello](https://trello.com/)
+![TRELLO](https://via.placeholder.com/800x400.png?text=Trello+Board)
 
 ---
-# Sistema de Préstamos Gota a Gota
-Sistema web para la gestión de préstamos a crédito con facilidades de pago diario, semanal y mensual. Desarrollado como proyecto final del curso de Java Web en SENATI.
 
-## Descripcion del negocio
-Nombre: Prestamos Gota a Gota <br>
-Giro: Financiera informal de creditos personales <br>
-Tamaño: Pequeña empresa, operacion individual o familiar <br>
-Contexto: Negocio muy comun en el Peru donde un cobrador otorga prestamos pequeños a personas que no acceden a bancos, cobrando cuotas diarias, semanales o mensuales visitando al cliente en su domicilio o trabajo. <br>
-Justificacion: Se necesita un sistema digital para reemplazar el cuaderno manual del cobrador, evitar errores y tener un control claro de cada prestamo y cobro.
+# Sistema de Gestión - Tienda Tang
+Sistema web para la gestión de una tienda, permitiendo administrar productos, proveedores, clientes y ventas de manera eficiente. Desarrollado como proyecto final del curso de Java Web en SENATI.
 
-## Identificar el problema y solución
-Problema: El cobrador lleva el registro de prestamos y cobros en un cuaderno o en papel, lo que genera errores, perdida de informacion, dificultad para saber cuanto debe cada cliente y cuantas cuotas faltan. <br>
-Solucion tecnologica: Desarrollar un sistema web con Java Spring Boot y MySQL que permita registrar clientes, prestamos y cobros diarios, mostrando en todo momento el estado de cada prestamo y el historial de pagos.
+---
 
- 
+## Descripción del negocio
+Nombre: Tienda Tang  
+Giro: Comercio de productos  
+Tamaño: Pequeña empresa  
+Contexto: Negocio donde se venden distintos productos y se requiere llevar un control de inventario, ventas y proveedores.  
+Justificación: Digitalizar el control manual para mejorar la organización, reducir errores y tener un control en tiempo real.
+
+---
+
+## Identificación del problema y solución
+
+Problema:  
+El negocio lleva el control de productos, ventas y clientes de forma manual, lo que genera errores, pérdida de información y descontrol del inventario.
+
+Solución tecnológica:  
+Desarrollar un sistema web usando Java Spring Boot y MySQL que permita registrar, consultar y controlar todas las operaciones de la tienda.
+
+---
+
 ## Requerimientos Funcionales
-| Codigo | Descripcion |
+
+| Código | Descripción |
 |---|---|
-| RF01 | El sistema debe permitir registrar un nuevo cliente con nombre, apellido, DNI, telefono y direccion |
-| RF02 | El sistema debe permitir registrar un nuevo prestamo indicando monto total, cuota, numero de cuotas y fecha de inicio |
-| RF03 | El sistema debe permitir registrar el cobro diario de un cliente asociado a su prestamo |
-| RF04 | El sistema debe mostrar el listado de todos los clientes con su estado de deuda |
-| RF05 | El sistema debe mostrar el historial de cobros realizados por prestamo |
- 
+| RF01 | Registrar proveedores |
+| RF02 | Registrar productos con stock y precio |
+| RF03 | Registrar clientes |
+| RF04 | Registrar ventas |
+| RF05 | Mostrar listado de productos |
+| RF06 | Mostrar historial de ventas |
+
+---
+
 ## Requerimientos No Funcionales
- 
-| Codigo | Tipo | Descripcion |
+
+| Código | Tipo | Descripción |
 |---|---|---|
-| RNF01 | Rendimiento | El sistema debe cargar cada pantalla en menos de 3 segundos |
-| RNF02 | Usabilidad | La interfaz debe ser intuitiva y facil de usar sin necesidad de capacitacion previa |
-| RNF03 | Seguridad | Solo usuarios autorizados podran acceder al sistema mediante usuario y contraseña |
+| RNF01 | Rendimiento | Respuesta menor a 3 segundos |
+| RNF02 | Usabilidad | Interfaz intuitiva |
+| RNF03 | Seguridad | Acceso con autenticación |
+
+---
 
 ## Stack completo
-1. Trello             = Gestión del proyecto (Kanban)
-2. Draw.io            = Diagrama ER + Diagrama de Clases
-3. Figma              = Wireframe + Diseño UI/UX
-4. MySQL Workbench    = Diseñar y administrar BD
-5. IntelliJ           = Frontend (HTML,CSS,JS) + Backend (Spring Boot)
-6. XAMPP              = Servidor Tomcat para correr la app
+1. Trello             → Gestión del proyecto  
+2. Draw.io            → Diagramas  
+3. Figma              → Diseño UI/UX  
+4. MySQL Workbench    → Base de datos  
+5. IntelliJ IDEA      → Backend + Frontend  
+6. XAMPP              → Servidor  
 
-## Tecnologias utilizadas
+---
+
+## Tecnologías utilizadas
 - Java 17
 - Spring Boot 3
 - MySQL 8
 - HTML5, CSS3, JavaScript
 - IntelliJ IDEA
-- XAMPP (Tomcat)
+- XAMPP
 - MySQL Workbench
-- Figma (diseño UI/UX)
-- Draw.io (diagramas)
----
- 
-## Estructura del proyecto
- 
-```
-JavaWeb-GotaGota/
-├── backend/          → Spring Boot (Java)
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-├── frontend/         → HTML, CSS, JS
-│   ├── css/
-│   ├── js/
-│   └── index.html
-```
- 
+- Draw.io
+- Figma
+
 ---
 
-### DIAGRAMA DE FIGMA UI/UX
-![FIGMA](https://www.figma.com/design/BXoCcKRR9FjiXnO5TxFhuK/Proyecto-Senati?node-id=1-7&t=OXx4vC4zMc8uVobf-1)
+## Estructura del proyecto
+
+
+TiendaTang/
+├── backend/ → Spring Boot
+│ ├── src/
+│ ├── pom.xml
+│ └── ...
+├── frontend/ → HTML, CSS, JS
+│ ├── css/
+│ ├── js/
+│ └── index.html
+
+
+---
 
 ## Base de datos
- 
+
 El sistema cuenta con 4 tablas principales:
- 
-| Tabla | Descripcion |
+
+| Tabla | Descripción |
 |---|---|
-| COBRADOR | Personas encargadas de gestionar y cobrar los prestamos |
-| CLIENTE | Personas que solicitan el prestamo |
-| PRESTAMO | Registro de cada prestamo otorgado |
-| COBRO | Registro de cada pago diario realizado |
+| PROVEEDOR | Empresas que suministran productos |
+| PRODUCTO | Productos disponibles en la tienda |
+| CLIENTE | Personas que compran |
+| VENTA | Registro de ventas |
 
-### Diagrama Entidad-Relacion (DER)
-![Diagrama Entidad Relacion](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Diagrama_Entidad_Relacion.png)
- 
-### Modelo Relacional (MR)
-![Modelo Relacional](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Modelo_Relacional.png)
+---
 
-### Cardinalidades
-COBRADOR — PRESTAMO (1:N) <br>
-Un cobrador puede gestionar muchos prestamos, pero un prestamo es gestionado por un solo cobrador. <br>
-CLIENTE — PRESTAMO (1:N) <br>
-Un cliente puede solicitar muchos prestamos, pero un prestamo pertenece a un solo cliente. <br>
-PRESTAMO — COBRO (1:N) <br>
-Un prestamo puede generar muchos cobros, pero un cobro pertenece a un solo prestamo.
+## Cardinalidades
 
-| Entidad A | Relacion | Entidad B | Cardinalidad |
-|---|---|---|---|
-| COBRADOR | gestiona | PRESTAMO | 1:N |
-| CLIENTE | solicita | PRESTAMO | 1:N |
-| PRESTAMO | genera | COBRO | 1:N |
+PROVEEDOR — PRODUCTO (1:N)  
+Un proveedor puede tener muchos productos, pero un producto pertenece a un solo proveedor.
 
+CLIENTE — VENTA (1:N)  
+Un cliente puede realizar muchas compras, pero cada venta pertenece a un solo cliente.
 
-### Base de datos
- 
-El sistema cuenta con 4 tablas principales:
+---
+
+## Modelo SQL
 
 ```sql
-CREATE DATABASE IF NOT EXISTS gota_a_gota;
-USE gota_a_gota;
+CREATE DATABASE bodega_tang;
+USE bodega_tang;
 
-CREATE TABLE cobrador (
-    cobrador_id INT AUTO_INCREMENT PRIMARY KEY,
+-- Tabla PROVEEDOR
+CREATE TABLE proveedor (
+    id_proveedor INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
     telefono VARCHAR(15),
-    email VARCHAR(100)
+    direccion VARCHAR(150)
 );
 
+-- Tabla PRODUCTO
+CREATE TABLE producto (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(150),
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    id_proveedor INT,
+    FOREIGN KEY (id_proveedor) REFERENCES proveedor(id_proveedor)
+);
+
+-- Tabla CLIENTE
 CREATE TABLE cliente (
-    cliente_id INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    dni VARCHAR(8) NOT NULL UNIQUE,
     telefono VARCHAR(15),
-    direccion VARCHAR(255)
+    direccion VARCHAR(150)
 );
 
-CREATE TABLE prestamo (
-    prestamo_id INT AUTO_INCREMENT PRIMARY KEY,
-    cobrador_id INT NOT NULL,
-    cliente_id INT NOT NULL,
-    monto_total DECIMAL(10,2) NOT NULL,
-    monto_cuota DECIMAL(10,2) NOT NULL,
-    num_cuotas INT NOT NULL,
-    fecha_inicio DATE NOT NULL,
-    estado ENUM('activo', 'pagado') DEFAULT 'activo',
-    FOREIGN KEY (cobrador_id) REFERENCES cobrador(cobrador_id),
-    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
-);
-
-CREATE TABLE cobro (
-    cobro_id INT AUTO_INCREMENT PRIMARY KEY,
-    prestamo_id INT NOT NULL,
-    fecha_cobro DATE NOT NULL,
-    monto_cobrado DECIMAL(10,2) NOT NULL,
-    estado ENUM('pagado', 'pendiente') DEFAULT 'pendiente',
-    FOREIGN KEY (prestamo_id) REFERENCES prestamo(prestamo_id)
+-- Tabla VENTA
+CREATE TABLE venta (
+    id_venta INT AUTO_INCREMENT PRIMARY KEY,
+    fecha DATE NOT NULL,
+    id_cliente INT,
+    total DECIMAL(10,2),
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
 
-INSERT INTO cliente (nombre, apellido, dni, telefono, direccion) VALUES
-('Juan', 'Perez', '12345678', '961234567', 'Jr. Inmaculada 123, Pucallpa'),
-('Maria', 'Garcia', '23456789', '962345678', 'Av. Centenario 456, Pucallpa'),
-('Carlos', 'Lopez', '34567890', '963456789', 'Jr. Ucayali 789, Pucallpa'),
-('Rosa', 'Martinez', '45678901', '964567890', 'Av. Tupac Amaru 321, Pucallpa'),
-('Pedro', 'Sanchez', '56789012', '965678901', 'Jr. 7 de Junio 654, Pucallpa'),
-('Ana', 'Torres', '67890123', '966789012', 'Av. Yarinacocha 987, Pucallpa'),
-('Luis', 'Flores', '78901234', '967890123', 'Jr. Progreso 147, Pucallpa'),
-('Carmen', 'Ramirez', '89012345', '968901234', 'Av. Sáenz Peña 258, Pucallpa'),
-('Jorge', 'Diaz', '90123456', '969012345', 'Jr. Coronel Portillo 369, Pucallpa'),
-('Sandra', 'Vega', '01234567', '960123456', 'Av. Nueva Requena 741, Pucallpa');
+-- INSERT PROVEEDOR
+INSERT INTO proveedor (nombre, telefono, direccion) VALUES
+('Distribuidora Lima', '987654321', 'Av. Lima 123'),
+('Comercial Norte', '912345678', 'Jr. Amazonas 456'),
+('Importadora Perú', '998877665', 'Av. Perú 789'),
+('Mayorista Central', '976543210', 'Jr. Callao 321'),
+('Almacenes Unidos', '955443322', 'Av. Arequipa 654'),
+('Suministros SAC', '933221144', 'Jr. Piura 987'),
+('Productos del Sur', '911223344', 'Av. Tacna 159');
 
+-- INSERT PRODUCTO
+INSERT INTO producto (nombre, descripcion, precio, stock, id_proveedor) VALUES
+('Arroz 1kg', 'Arroz superior', 4.50, 100, 1),
+('Azúcar 1kg', 'Azúcar rubia', 3.80, 80, 2),
+('Leche Gloria', 'Leche evaporada', 4.20, 60, 3),
+('Aceite 1L', 'Aceite vegetal', 8.90, 50, 4),
+('Fideos', 'Fideos largos', 2.50, 120, 5),
+('Galletas', 'Galletas dulces', 1.80, 200, 6),
+('Atún', 'Atún en lata', 5.50, 70, 7);
 
+-- INSERT CLIENTE
+INSERT INTO cliente (nombre, telefono, direccion) VALUES
+('Juan Pérez', '900111222', 'Jr. Pucallpa 123'),
+('María López', '900333444', 'Av. Ucayali 456'),
+('Carlos Ruiz', '900555666', 'Jr. Iquitos 789'),
+('Ana Torres', '900777888', 'Av. Amazonas 321'),
+('Luis García', '900999000', 'Jr. Loreto 654'),
+('Sofía Mendoza', '901112233', 'Av. Perú 987'),
+('Pedro Castillo', '902223344', 'Jr. Lima 159');
+
+-- INSERT VENTA
+INSERT INTO venta (fecha, id_cliente, total) VALUES
+('2026-04-01', 1, 15.50),
+('2026-04-02', 2, 23.00),
+('2026-04-03', 3, 10.80),
+('2026-04-04', 4, 45.20),
+('2026-04-05', 5, 18.90),
+('2026-04-06', 6, 27.30),
+('2026-04-07', 7, 12.60);
 ```
 
 ---
- 
-## Como correr el proyecto
- 
-### Requisitos previos
-- Tener instalado IntelliJ IDEA
-- Tener instalado XAMPP (para MySQL)
-- Tener instalado MySQL Workbench
-- Tener instalado JDK 21 o superior
- 
-### Backend
-1. Abrir la carpeta `backend/` en IntelliJ IDEA
-2. Configurar `application.properties` con los datos de MySQL
-3. Iniciar XAMPP y activar MySQL
-4. Ejecutar `GotagotaApplication.java`
-5. El backend corre en: `http://localhost:8080`
- 
-### Frontend
-1. Abrir la carpeta `frontend/` en VsCode
-2. Abrir `index.html` con Live Server
-3. El frontend se comunica con el backend via fetch()
- 
-> El frontend y el backend corren por separado.
-> El backend debe estar iniciado antes de abrir el frontend.
- 
-### Configuracion de base de datos
-```
-spring.application.name=gotagota
-# CONEXION A MYSQL
-spring.datasource.url=jdbc:mysql://localhost:3306/gota_a_gota
-spring.datasource.username=root
-spring.datasource.password=
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-#JPA / HIBERNATE
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+## Cómo correr el proyecto
+🔧 Requisitos previos
+IntelliJ IDEA
+XAMPP
+MySQL Workbench
+JDK 17 o superior
+Backend
+Abrir backend/ en IntelliJ
+Configurar application.properties
+Iniciar MySQL en XAMPP
+Ejecutar el proyecto
 
-# Puerto del servidor
-server.port=8080
+Servidor:
 
-```
- 
-
+http://localhost:8080
+Frontend
+Abrir frontend/ en VS Code
+Ejecutar con Live Server
