@@ -1,7 +1,7 @@
 package com.senati.Bodega_Tang.repository;
 
 // IMPORTAMOS LOS DRIVERS, METODOS
-import com.senati.TiendaSintia.entity.Producto;
+import com.senati.Bodega_Tang.entity.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

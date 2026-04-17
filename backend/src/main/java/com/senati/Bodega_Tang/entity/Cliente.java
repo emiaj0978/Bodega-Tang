@@ -1,6 +1,5 @@
 package com.senati.Bodega_Tang.entity;
 
-
 import jakarta.persistence.*;
 // @Entity le dice a Hibernate que esta clase representa una tabla en la BD
 @Entity

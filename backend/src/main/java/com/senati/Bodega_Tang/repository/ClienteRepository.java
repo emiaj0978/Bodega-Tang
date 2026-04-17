@@ -1,7 +1,7 @@
 package com.senati.Bodega_Tang.repository;
 
 // IMPORTAMOS LOS DRIVERS, METODOS
-import com.senati.LBNETWORK.entity.Cliente;
+import com.senati.Bodega_Tang.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
