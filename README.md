@@ -4,13 +4,13 @@ Más info en [mi tablero de trello](https://trello.com/)
 
 ---
 
-# Sistema de Gestión - Tienda Tang
-Sistema web para la gestión de una tienda, permitiendo administrar productos, proveedores, clientes y ventas de manera eficiente. Desarrollado como proyecto final del curso de Java Web en SENATI.
+# Sistema de Gestión - Bodega Tang
+Sistema web para la gestión de una bodega, permitiendo administrar productos, proveedores, clientes y ventas de manera eficiente. Desarrollado como proyecto final del curso de Java Web en SENATI.
 
 ---
 
 ## Descripción del negocio
-Nombre: Tienda Tang  
+Nombre: Bodega Tang  
 Giro: Comercio de productos  
 Tamaño: Pequeña empresa  
 Contexto: Negocio donde se venden distintos productos y se requiere llevar un control de inventario, ventas y proveedores.  
