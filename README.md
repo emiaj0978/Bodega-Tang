@@ -102,10 +102,10 @@ El sistema cuenta con 4 tablas principales:
 | VENTA | Registro de ventas |
 
 ### Diagrama Entidad-Relacion (DER)
-![Diagrama Entidad Relacion](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Diagrama_Entidad_Relacion.png)
+![Diagrama Entidad Relacion](https://github.com/emiaj0978/Bodega-Tang/blob/main/frontend/imagen/image3.png)
  
 ### Modelo Relacional (MR)
-![Modelo Relacional](https://github.com/ojitoslanda/testing/blob/master/img/javaweb/Modelo_Relacional.png)
+![Modelo Relacional](https://github.com/emiaj0978/Bodega-Tang/blob/main/frontend/imagen/image2.png)
 
 ---
 
