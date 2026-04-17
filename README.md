@@ -1,6 +1,6 @@
 ## TRELLO
-Más info en [mi tablero de trello](https://trello.com/)
-![TRELLO](https://via.placeholder.com/800x400.png?text=Trello+Board)
+mi tablero de trello
+![TRELLO](https://github.com/emiaj0978/Bodega-Tang/blob/main/frontend/imagen/image.png)
 
 ---
 
